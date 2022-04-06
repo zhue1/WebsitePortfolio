@@ -4,10 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <title>Drawing Board</title>
+    <link rel="stylesheet" href="drawing-board.css">
 </head>
 <body>
-    <canvas id="canvas"></canvas>
-    <script src="drawing-board.js"></script>
+    <div class="field">
+        <div class="tools">
+            <button onClick="undo_last()" type="button" class="button">Undo</button>
+            <button onClick="clear_canvas()" type="button" class="button">Clear</button>
+            <input onInput="draw_color = this.value" type="color" class="color-picker">
+            <input onInput="draw_width = this.value" type="range" min="1" max="100" class="brush-range">
+        </div>
+        <canvas id="canvas"></canvas>
+        
+    </div>
 </body>
+<script src="drawing-board.js"></script>
 </html>

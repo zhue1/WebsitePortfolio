@@ -1,9 +1,36 @@
-*{
-    box-sizing: border-box;
-    background-color: rgb(221, 215, 159);
+body{
+    margin: 0;
+    padding: 30px;
+    overflow: hidden;
+    background: rgb(250, 243, 177);
+
 }
 
 #canvas{
-    margin: 5% 10%;
-    padding: 0;
+    box-shadow: 1px 1px 5px 1px black;
+}
+
+.tools{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+}
+
+.tools .button{
+    width: 80px;
+    height: 40px;
+    border: 1px solid rgb(0, 0, 0);
+    cursor: pointer;
+    font-weight: bold;
+    margin: 0 5px;
+}
+
+.color-picker{
+    margin: 0 5px;
+    height: 40px;
+    width: 100px;
+}
+
+.pen-range{
+    margin: 0 5px;
 }
