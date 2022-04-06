@@ -27,6 +27,8 @@ window.addEventListener("load", () => {
 window.addEventListener("resize", () => {
     canvas.height = window.innerHeight - 100;
     canvas.width = window.innerWidth - 60;
+    ctx.fillStyle = "white";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
 })
 
 function start(e){
