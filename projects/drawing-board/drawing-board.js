@@ -1,7 +1,10 @@
+const slider = document.querySelector(".brush-range");
+const width_value = document.querySelector(".width-value");
+width_value.textContent = slider.value;
+
 const canvas = document.querySelector("#canvas");
 const ctx = canvas.getContext("2d");
 let draw_color = "black";
-let draw_width = "2";
 let painting = false;
 
 let restore_array = [];
@@ -31,6 +34,9 @@ window.addEventListener("resize", () => {
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 })
 
+slider.oninput = function(){
+    width_value.textContent = this.value;
+}
 function start(e){
     painting = true;
     ctx.beginPath();
@@ -44,7 +50,7 @@ function draw(e){
     ctx.lineCap = "round";
     ctx.lineJoin = "round";
     ctx.strokeStyle = draw_color;
-    ctx.lineWidth = draw_width;
+    ctx.lineWidth = slider.value;
 
     ctx.lineTo(e.clientX - canvas.offsetLeft, e.clientY - canvas.offsetTop);
     ctx.stroke();
