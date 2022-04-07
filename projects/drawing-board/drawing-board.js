@@ -52,6 +52,7 @@ slider.oninput = function () {
 function start(e) {
 	painting = true;
 	ctx.beginPath();
+	draw(e);
 	ctx.moveTo(e.clientX - canvas.offsetLeft, e.clientY - canvas.offsetTop);
 	e.preventDefault();
 }
